@@ -1,0 +1,18 @@
+{
+  "title": "PCA General Assembly Overture Analysis",
+  "description": "A podcast feed for audio analysis of overtures before the Presbyterian Church in America General Assembly.",
+  "author": "Chris Rimondi",
+  "ownerName": "Chris Rimondi",
+  "ownerEmail": "chris.rimondi@gmail.com",
+  "language": "en-us",
+  "category": "Religion & Spirituality",
+  "explicit": false,
+  "siteUrl": "https://chrisrimondi.github.io/pca-general-assembly-overture-analysis",
+  "feedUrl": "https://chrisrimondi.github.io/pca-general-assembly-overture-analysis/feed.xml",
+  "imageUrl": "https://chrisrimondi.github.io/pca-general-assembly-overture-analysis/artwork/cover.jpg",
+  "tts": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "cedar",
+    "instructions": "Read this as a calm, thoughtful podcast analysis for church officers and interested Presbyterians. Sound measured, charitable, precise, and conversational. Make polity language clear without sounding rushed or theatrical."
+  }
+}

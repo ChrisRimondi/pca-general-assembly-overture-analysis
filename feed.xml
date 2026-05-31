@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PCA General Assembly Overture Analysis</title>
+    <link>https://chrisrimondi.github.io/pca-general-assembly-overture-analysis</link>
+    <description>A podcast feed for audio analysis of overtures before the Presbyterian Church in America General Assembly. Disclosure: episodes use AI-generated voices.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 May 2026 19:50:43 GMT</lastBuildDate>
+    <itunes:author>Chris Rimondi</itunes:author>
+    <itunes:owner>
+      <itunes:name>Chris Rimondi</itunes:name>
+      <itunes:email>chris.rimondi@gmail.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://chrisrimondi.github.io/pca-general-assembly-overture-analysis/artwork/cover.jpg"/>
+    <itunes:category text="Religion &amp; Spirituality"/>
+    <itunes:explicit>false</itunes:explicit>
+
+  </channel>
+</rss>
