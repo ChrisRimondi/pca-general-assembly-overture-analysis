@@ -7,7 +7,7 @@
     <link>https://chrisrimondi.github.io/pca-general-assembly-overture-analysis</link>
     <description>A podcast feed for audio analysis of overtures before the Presbyterian Church in America General Assembly. Disclosure: episodes use AI-generated voices.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 May 2026 19:50:43 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 16:00:00 GMT</lastBuildDate>
     <itunes:author>Chris Rimondi</itunes:author>
     <itunes:owner>
       <itunes:name>Chris Rimondi</itunes:name>
@@ -16,6 +16,21 @@
     <itunes:image href="https://chrisrimondi.github.io/pca-general-assembly-overture-analysis/artwork/cover.jpg"/>
     <itunes:category text="Religion &amp; Spirituality"/>
     <itunes:explicit>false</itunes:explicit>
+    <item>
+      <title>PCA General Assembly Overture Analysis</title>
+      <description>PCA General Assembly Overture Analysis
 
+This episode analyzes major overture clusters before the Presbyterian Church in America General Assembly, moving through pastoral relations, Assembly procedure, diaconal office questions, judicial process, developing churches, administrative mechanics, and broader denominational declarations.
+
+Segment 1 - Pastoral Relations &amp; Succession
+
+This segment examines the fundamental relationship between a congregation and its pastors, focusing on the thresholds re
+
+Disclosure: this episode is AI-generated.</description>
+      <pubDate>Sun, 31 May 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="false">pca-overture-analysis-2026-05-31</guid>
+      <enclosure url="https://chrisrimondi.github.io/pca-general-assembly-overture-analysis/episodes/pca-overture-analysis-2026-05-31.m4a" length="91143283" type="audio/mp4"/>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
   </channel>
 </rss>

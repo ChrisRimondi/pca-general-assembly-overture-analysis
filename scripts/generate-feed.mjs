@@ -3,6 +3,27 @@ import path from "node:path";
 import { escapeXml, markdownToPlainText, readJson } from "./lib.mjs";
 
 const config = await readJson("config/podcast.json");
+const audioTypes = {
+  ".m4a": "audio/mp4",
+  ".mp3": "audio/mpeg"
+};
+
+async function findAudio(slug) {
+  for (const extension of [".m4a", ".mp3"]) {
+    const audioPath = path.join("episodes", `${slug}${extension}`);
+    try {
+      return {
+        path: audioPath,
+        extension,
+        stats: await stat(audioPath)
+      };
+    } catch {
+      // Try the next supported extension.
+    }
+  }
+
+  return null;
+}
 
 async function getEpisodes() {
   const noteFiles = (await readdir("notes"))
@@ -13,11 +34,8 @@ async function getEpisodes() {
   const episodes = [];
   for (const noteFile of noteFiles) {
     const slug = noteFile.replace(/\.md$/i, "");
-    const audioPath = path.join("episodes", `${slug}.mp3`);
-    let audioStats;
-    try {
-      audioStats = await stat(audioPath);
-    } catch {
+    const audio = await findAudio(slug);
+    if (!audio) {
       continue;
     }
 
@@ -32,8 +50,9 @@ async function getEpisodes() {
       title: firstHeading,
       description: `${summary}\n\nDisclosure: this episode is AI-generated.`,
       pubDate,
-      audioUrl: `${config.siteUrl}/episodes/${slug}.mp3`,
-      length: audioStats.size
+      audioUrl: `${config.siteUrl}/${audio.path}`,
+      length: audio.stats.size,
+      type: audioTypes[audio.extension]
     });
   }
   return episodes;
@@ -48,7 +67,7 @@ const items = episodes
       <description>${escapeXml(episode.description)}</description>
       <pubDate>${episode.pubDate.toUTCString()}</pubDate>
       <guid isPermaLink="false">${escapeXml(episode.slug)}</guid>
-      <enclosure url="${escapeXml(episode.audioUrl)}" length="${episode.length}" type="audio/mpeg"/>
+      <enclosure url="${escapeXml(episode.audioUrl)}" length="${episode.length}" type="${episode.type}"/>
       <itunes:explicit>${config.explicit ? "true" : "false"}</itunes:explicit>
     </item>`)
   .join("\n");

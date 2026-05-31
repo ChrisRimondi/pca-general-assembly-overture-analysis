@@ -4,7 +4,7 @@ Static GitHub Pages podcast feed for `PCA General Assembly Overture Analysis`.
 
 ## Where to Place Finished Audio
 
-Place finished MP3 files here:
+Place finished audio files here:
 
 `/Users/chrisrimondi/Documents/Codex/2026-05-16/pca-general-assembly-overture-analysis/episodes`
 
@@ -12,14 +12,14 @@ Use a matching note slug in `notes/`.
 
 Recommended naming pattern:
 
-`pca-overture-analysis-YYYY-MM-DD.mp3`
+`pca-overture-analysis-YYYY-MM-DD.m4a`
 
 Example:
 
-`episodes/pca-overture-analysis-2026-06-01.mp3`
+`episodes/pca-overture-analysis-2026-06-01.m4a`
 `notes/pca-overture-analysis-2026-06-01.md`
 
-The note title becomes the episode title in the podcast feed. If an MP3 already exists for the note slug, `npm run publish:episode` will use that audio file and will not generate replacement TTS audio.
+The note title becomes the episode title in the podcast feed. If an `.m4a` or `.mp3` already exists for the note slug, `npm run publish:episode` will use that audio file and will not generate replacement TTS audio.
 
 ## Publish an Episode
 
@@ -33,7 +33,7 @@ This updates `feed.xml`, commits the note/audio/feed changes, and pushes them to
 
 ## Generate Audio From a Note
 
-If no matching MP3 exists in `episodes/`, the publish command generates audio from the note with OpenAI TTS before updating the feed.
+If no matching `.m4a` or `.mp3` exists in `episodes/`, the publish command generates MP3 audio from the note with OpenAI TTS before updating the feed.
 
 ## Feed
 

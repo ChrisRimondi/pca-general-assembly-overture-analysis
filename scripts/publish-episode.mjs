@@ -16,9 +16,11 @@ function run(command, args) {
 }
 
 const slug = notePath.split("/").pop().replace(/\.md$/i, "");
-const audioPath = `episodes/${slug}.mp3`;
+const existingAudioPath = [`episodes/${slug}.m4a`, `episodes/${slug}.mp3`]
+  .find((candidatePath) => existsSync(candidatePath));
+const audioPath = existingAudioPath ?? `episodes/${slug}.mp3`;
 
-if (!existsSync(audioPath)) {
+if (!existingAudioPath) {
   run("node", ["scripts/generate-audio.mjs", notePath]);
 }
 
